@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plata</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style2.css">
+    <script src="index.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("LJkFvjUsS8E-oaZFG");
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="container border mt-3 bg-light">
+      <div class="row">
+        <div class="col-md-6 border-left py-3">
+          <h1>Formular Plata</h1>
+          <p></p>
+          <form action="">
+          <div class="inputBox">
+            <span>carduri acceptate:</span>
+            <img src="images/card_img.png" alt="">
+        </div>
+        <p></p>
+          <div class="form-group">
+            <h5 for="name">Nume</h5>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Numele intreg"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="email">Email</h5>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="example@example.com"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="nrcard">Numar Card</h5>
+            <input
+              type="nrcard"
+              class="form-control"
+              id="nrcard"
+              placeholder="1111-2222-3333-4444"
+            />
+          </div>
+
+          <div class="form-group">
+            <h5 for="message">CVV</h5>
+            <input
+              type="message"
+              class="form-control"
+              id="message"
+              placeholder="123"
+            />
+          </div>
+
+          <div class="form-group">
+            <h5 for="nrbil">Confirmare nr. bilete</h5>
+            <input
+              type="message"
+              class="form-control"
+              id="nrbil"
+              placeholder="1/ 2/ 3"
+            />
+          </div>
+          </form>
+          <p></p>
+          <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

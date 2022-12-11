@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Plata</title>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style2.css">
+
+    <script src="plata.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("LJkFvjUsS8E-oaZFG");
+      })();
+    </script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">Factura</h3>
+
+                <div class="inputBox">
+                    <span>numele si prenumele:</span>
+                    <input type="text" id="fullName" placeholder="john deo">
+                </div>
+                <div class="inputBox">
+                    <span>email:</span>
+                    <input type="email" id="email_id" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>adresa:</span>
+                    <input type="text" placeholder="Localitate, Strada, Numar">
+                </div>
+                <div class="inputBox">
+                    <span>Oras:</span>
+                    <input type="text" placeholder="Bucuresti">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>state:</span>
+                        <input type="text" placeholder="Romania">
+                    </div>
+                    <div class="inputBox">
+                        <span>Cod postal:</span>
+                        <input type="text" placeholder="123 456">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">Plata</h3>
+
+                <div class="inputBox">
+                    <span>carduri acceptate:</span>
+                    <img src="images/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>Nume:</span>
+                    <input type="text" placeholder="mr. john deo">
+                </div>
+                <div class="inputBox">
+                    <span>Numarul cardului:</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>Exp month:</span>
+                    <input type="text" placeholder="january">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year:</span>
+                        <input type="number" placeholder="2022">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV:</span>
+                        <input type="text" placeholder="1234">
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+        <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+</div>
+</form>
+</body>
+</html>
